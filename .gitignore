@@ -1,3 +1,4 @@
+# API
 # App artifacts
 api/_build
 api/db
@@ -14,3 +15,16 @@ api/erl_crash.dump
 # secrets files as long as you replace their contents by environment
 # variables.
 api/config/*.secret.exs
+
+#APP 
+# dependencies
+app/node_modules
+
+# logs
+app/npm-debug.log
+
+# Nuxt build
+app/.nuxt
+
+# Nuxt generate
+app/dist
