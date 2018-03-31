@@ -1,10 +1,8 @@
-# The streams.moe reborn project
+# Moonchild (月子)
+A streaming platform for the rest of us.
+Focusing on a creating a simple yet feature rich self-hosted streaming platform
 
-## Main goals
-
-A more maintainable, and feature rich self-hosted streaming platform
-
-### Features
+### Features/Goals
 
 1. HTML5 video streaming
 2. A feature-rich SPA front-end
