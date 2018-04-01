@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :streams_moe,
-  ecto_repos: [StreamsMoe.Repo]
+config :moonchild,
+  ecto_repos: [Moonchild.Repo]
 
 # Configures the endpoint
-config :streams_moe, StreamsMoeWeb.Endpoint,
+config :moonchild, MoonchildWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "YjNGQ8LpmPCBRzIfvmjDIZ1kvEPqYrxYeoUm0QMhisw/TTVw90WZRQFHoD3iFl9L",
-  render_errors: [view: StreamsMoeWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: StreamsMoe.PubSub,
+  secret_key_base: "Ct8bx8aAQQuk9yCm/6kyV2DF8lyePqKUesreCSbXzszvtByRU9GQft3GhqlZsa7w",
+  render_errors: [view: MoonchildWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Moonchild.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

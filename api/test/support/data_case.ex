@@ -1,4 +1,4 @@
-defmodule StreamsMoe.DataCase do
+defmodule Moonchild.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule StreamsMoe.DataCase do
 
   using do
     quote do
-      alias StreamsMoe.Repo
+      alias Moonchild.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import StreamsMoe.DataCase
+      import Moonchild.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(StreamsMoe.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Moonchild.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(StreamsMoe.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Moonchild.Repo, {:shared, self()})
     end
 
     :ok

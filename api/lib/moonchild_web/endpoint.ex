@@ -1,14 +1,14 @@
-defmodule StreamsMoeWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :streams_moe
+defmodule MoonchildWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :moonchild
 
-  socket "/socket", StreamsMoeWeb.UserSocket
+  socket "/socket", MoonchildWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :streams_moe, gzip: false,
+    at: "/", from: :moonchild, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -34,10 +34,10 @@ defmodule StreamsMoeWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_streams_moe_key",
-    signing_salt: "LEBWtunz"
+    key: "_moonchild_key",
+    signing_salt: "Tzlr5Ew8"
 
-  plug StreamsMoeWeb.Router
+  plug MoonchildWeb.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

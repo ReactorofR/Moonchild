@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :streams_moe, StreamsMoeWeb.Endpoint,
+config :moonchild, MoonchildWeb.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,10 @@ config :streams_moe, StreamsMoeWeb.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :streams_moe, StreamsMoe.Repo,
+config :moonchild, Moonchild.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "streams_moe_test",
+  database: "moonchild_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

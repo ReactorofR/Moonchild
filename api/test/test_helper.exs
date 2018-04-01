@@ -1,4 +1,4 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(StreamsMoe.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Moonchild.Repo, :manual)
 

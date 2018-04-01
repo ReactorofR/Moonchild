@@ -1,4 +1,4 @@
-defmodule StreamsMoeWeb.ChannelCase do
+defmodule MoonchildWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule StreamsMoeWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint StreamsMoeWeb.Endpoint
+      @endpoint MoonchildWeb.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(StreamsMoe.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Moonchild.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(StreamsMoe.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Moonchild.Repo, {:shared, self()})
     end
     :ok
   end

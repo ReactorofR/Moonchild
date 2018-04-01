@@ -1,5 +1,5 @@
-defmodule StreamsMoeWeb.Router do
-  use StreamsMoeWeb, :router
+defmodule MoonchildWeb.Router do
+  use MoonchildWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,12 +13,14 @@ defmodule StreamsMoeWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", StreamsMoeWeb do
-    pipe_through :api # Use the default browser stack
+  scope "/", MoonchildWeb do
+    pipe_through :browser # Use the default browser stack
+
+    get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", StreamsMoeWeb do
+  # scope "/api", MoonchildWeb do
   #   pipe_through :api
   # end
 end

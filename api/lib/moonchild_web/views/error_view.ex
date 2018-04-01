@@ -1,5 +1,5 @@
-defmodule StreamsMoeWeb.ErrorView do
-  use StreamsMoeWeb, :view
+defmodule MoonchildWeb.ErrorView do
+  use MoonchildWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

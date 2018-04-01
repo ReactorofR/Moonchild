@@ -1,5 +1,5 @@
-defmodule StreamsMoeWeb.PageControllerTest do
-  use StreamsMoeWeb.ConnCase
+defmodule MoonchildWeb.PageControllerTest do
+  use MoonchildWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

@@ -1,5 +1,5 @@
-defmodule StreamsMoe.Repo do
-  use Ecto.Repo, otp_app: :streams_moe
+defmodule Moonchild.Repo do
+  use Ecto.Repo, otp_app: :moonchild
 
   @doc """
   Dynamically loads the repository url from the

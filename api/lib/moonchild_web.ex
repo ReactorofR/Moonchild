@@ -1,12 +1,12 @@
-defmodule StreamsMoeWeb do
+defmodule MoonchildWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use StreamsMoeWeb, :controller
-      use StreamsMoeWeb, :view
+      use MoonchildWeb, :controller
+      use MoonchildWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,17 +19,17 @@ defmodule StreamsMoeWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: StreamsMoeWeb
+      use Phoenix.Controller, namespace: MoonchildWeb
       import Plug.Conn
-      import StreamsMoeWeb.Router.Helpers
-      import StreamsMoeWeb.Gettext
+      import MoonchildWeb.Router.Helpers
+      import MoonchildWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/streams_moe_web/templates",
-                        namespace: StreamsMoeWeb
+      use Phoenix.View, root: "lib/moonchild_web/templates",
+                        namespace: MoonchildWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -37,9 +37,9 @@ defmodule StreamsMoeWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import StreamsMoeWeb.Router.Helpers
-      import StreamsMoeWeb.ErrorHelpers
-      import StreamsMoeWeb.Gettext
+      import MoonchildWeb.Router.Helpers
+      import MoonchildWeb.ErrorHelpers
+      import MoonchildWeb.Gettext
     end
   end
 
@@ -54,7 +54,7 @@ defmodule StreamsMoeWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import StreamsMoeWeb.Gettext
+      import MoonchildWeb.Gettext
     end
   end
 

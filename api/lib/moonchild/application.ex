@@ -1,4 +1,4 @@
-defmodule StreamsMoe.Application do
+defmodule Moonchild.Application do
   use Application
 
   # See https://hexdocs.pm/elixir/Application.html
@@ -9,23 +9,23 @@ defmodule StreamsMoe.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(StreamsMoe.Repo, []),
+      supervisor(Moonchild.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(StreamsMoeWeb.Endpoint, []),
-      # Start your own worker by calling: StreamsMoe.Worker.start_link(arg1, arg2, arg3)
-      # worker(StreamsMoe.Worker, [arg1, arg2, arg3]),
+      supervisor(MoonchildWeb.Endpoint, []),
+      # Start your own worker by calling: Moonchild.Worker.start_link(arg1, arg2, arg3)
+      # worker(Moonchild.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: StreamsMoe.Supervisor]
+    opts = [strategy: :one_for_one, name: Moonchild.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    StreamsMoeWeb.Endpoint.config_change(changed, removed)
+    MoonchildWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end
