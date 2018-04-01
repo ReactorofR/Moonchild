@@ -13,10 +13,21 @@ defmodule MoonchildWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", MoonchildWeb do
-    pipe_through :browser # Use the default browser stack
+  pipeline :auth do
+    plug Moonchild.Auth.pipeline
+  end
 
-    get "/", PageController, :index
+  pipeline :ensure_auth do
+    plug Guardian.Plug.EnsureAuthenticated
+  end
+
+  scope "/", MoonchildWeb do
+    pipe_through [:browser, :auth] # Use the default browser stack
+  end
+
+  # Definitely logged in scope
+  scope "/", MoonchildWeb do
+    pipe_through [:browser, :auth, :ensure_auth]
   end
 
   # Other scopes may use custom stacks.

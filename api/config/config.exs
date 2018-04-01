@@ -22,6 +22,10 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
+config :moonchild, Moonchild.Auth.Guardian,
+  issuer: "moonchild",
+  secret_key: "e1fWJG1rqoxI7fKb2zTpuWtJPxLNsEyIU6wufSG1Ug78A1GVwGVKljhy3uUgujuk"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
